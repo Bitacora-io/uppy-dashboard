@@ -108,7 +108,7 @@ module.exports = function FileProgress (props) {
       <div className="uppy-Dashboard-Item-progress">
         <div className="uppy-Dashboard-Item-progressIndicator">
           <ProgressCircleContainer>
-            <circle r="15" cx="18" cy="18" fill="#1bb240" />
+            <circle r="15" cx="18" cy="18" fill="#1ab394" />
             <polygon className="uppy-Dashboard-Item-progressIcon--check" transform="translate(2, 3)" points="14 22.5 7 15.2457065 8.99985857 13.1732815 14 18.3547104 22.9729883 9 25 11.1005634" />
           </ProgressCircleContainer>
         </div>

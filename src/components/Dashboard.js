@@ -33,9 +33,9 @@ module.exports = function Dashboard (props) {
     'uppy-Dashboard--isClosing': props.isClosing,
     'uppy-Dashboard--isDraggingOver': props.isDraggingOver,
     'uppy-Dashboard--modal': !props.inline,
-    'uppy-size--md': props.containerWidth > WIDTH_MD,
-    'uppy-size--lg': props.containerWidth > WIDTH_LG,
-    'uppy-size--xl': props.containerWidth > WIDTH_XL,
+    // 'uppy-size--md': props.containerWidth > WIDTH_MD,
+    // 'uppy-size--lg': props.containerWidth > WIDTH_LG,
+    // 'uppy-size--xl': props.containerWidth > WIDTH_XL,
     'uppy-size--height-md': props.containerHeight > HEIGHT_MD,
     'uppy-Dashboard--isAddFilesPanelVisible': props.showAddFilesPanel,
     'uppy-Dashboard--isInnerWrapVisible': props.areInsidesReadyToBeVisible,
@@ -92,7 +92,7 @@ module.exports = function Dashboard (props) {
         aria-modal={!props.inline && 'true'}
         role={!props.inline && 'dialog'}
         style={{
-          width: props.inline && props.width ? props.width : '',
+          maxWidth: props.inline && props.width ? props.width : '',
           height: props.inline && props.height ? props.height : '',
         }}
       >

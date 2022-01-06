@@ -92,11 +92,10 @@ class FileCard extends Component {
               form: this.form.id,
             }, h)
             : (
-              <input
+              <textarea
                 className={fieldCSSClasses.text}
                 id={id}
                 form={this.form.id}
-                type={field.type || 'text'}
                 required={required}
                 value={this.state.formState[field.id]}
                 placeholder={field.placeholder}
@@ -145,7 +144,7 @@ class FileCard extends Component {
         </div>
 
         <div className="uppy-Dashboard-FileCard-inner">
-          <div className="uppy-Dashboard-FileCard-preview" style={{ backgroundColor: getFileTypeIcon(file.type).color }}>
+          <div className="uppy-Dashboard-FileCard-preview">
             <FilePreview file={file} />
             {showEditButton
               && (
@@ -170,27 +169,27 @@ class FileCard extends Component {
           <div className="uppy-Dashboard-FileCard-info">
             {this.renderMetaFields()}
           </div>
+        </div>
 
-          <div className="uppy-Dashboard-FileCard-actions">
-            <button
-              className="uppy-u-reset uppy-c-btn uppy-c-btn-primary uppy-Dashboard-FileCard-actionsBtn"
-              // If `form` attribute is supported, we want a submit button to trigger the form validation.
-              // Otherwise, fallback to a classic button with a onClick event handler.
-              type={'form' in HTMLButtonElement.prototype ? 'submit' : 'button'}
-              onClick={'form' in HTMLButtonElement.prototype ? undefined : this.handleSave}
-              form={this.form.id}
-            >
-              {this.props.i18n('saveChanges')}
-            </button>
-            <button
-              className="uppy-u-reset uppy-c-btn uppy-c-btn-link uppy-Dashboard-FileCard-actionsBtn"
-              type="button"
-              onClick={this.handleCancel}
-              form={this.form.id}
-            >
-              {this.props.i18n('cancel')}
-            </button>
-          </div>
+        <div className="uppy-Dashboard-FileCard-actions">
+          <button
+            className="uppy-u-reset uppy-c-btn uppy-c-btn-primary uppy-Dashboard-FileCard-actionsBtn"
+            // If `form` attribute is supported, we want a submit button to trigger the form validation.
+            // Otherwise, fallback to a classic button with a onClick event handler.
+            type={'form' in HTMLButtonElement.prototype ? 'submit' : 'button'}
+            onClick={'form' in HTMLButtonElement.prototype ? undefined : this.handleSave}
+            form={this.form.id}
+          >
+            {this.props.i18n('saveChanges')}
+          </button>
+          <button
+            className="uppy-u-reset uppy-c-btn uppy-c-btn-link uppy-Dashboard-FileCard-actionsBtn"
+            type="button"
+            onClick={this.handleCancel}
+            form={this.form.id}
+          >
+            {this.props.i18n('cancel')}
+          </button>
         </div>
       </div>
     )
