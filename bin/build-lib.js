@@ -39,7 +39,7 @@ async function buildLib () {
     if (IGNORE.test(file)) {
       continue
     }
-    const libFile = file.replace('/src/', '/lib/')
+    const libFile = file.replace('src/', 'lib/')
 
     // on a fresh build, rebuild everything.
     if (!process.env.FRESH) {

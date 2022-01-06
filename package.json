@@ -24,7 +24,7 @@
   "scripts": {
     "build:clean": "rm -rf lib",
     "build:lib": "node ./bin/build-lib.js",
-    "build": "yarn node build:lib"
+    "build": "yarn build:lib"
   },
   "dependencies": {
     "@transloadit/prettier-bytes": "0.0.7",
