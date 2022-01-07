@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build:clean": "rm -rf lib",
-    "build:lib": "node ./bin/build-lib.js",
+    "build:lib": "yarn node ./bin/build-lib.js",
     "build": "yarn build:lib"
   },
   "dependencies": {
@@ -41,8 +41,8 @@
     "preact": "^10.5.13"
   },
   "devDependencies": {
-    "@uppy/google-drive": "^2.0.5",
     "@uppy/core": "^2.1.4",
+    "@uppy/google-drive": "^2.0.5",
     "resize-observer-polyfill": "^1.5.0",
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
@@ -128,5 +128,8 @@
   },
   "peerDependencies": {
     "@uppy/core": "^2.1.4"
+  },
+  "resolutions": {
+    "babel-plugin-transform-commonjs@1.1.6": "patch:babel-plugin-transform-commonjs@npm:1.1.6#.yarn/patches/babel-plugin-transform-commonjs-npm-1.1.6-0007fa2809"
   }
 }
